@@ -337,10 +337,10 @@ footer span { color: var(--gold); opacity: 0.6; }
   <div class="badge">🇨🇳 China → 🇳🇬 Nigeria · Direct Sourcing</div>
   <h1>Stop Paying Double For<br><span>The Same Products</span></h1>
   <p>Some Nigerians are buying the exact same items you buy — for up to 40% less. Here's how they do it.</p>
-  <!-- CHANGED: standard link + long-press note -->
   <a href="https://chat.whatsapp.com/DdjjarQyUNtAXRRQlzke3A" class="btn-gold" id="whatsappButton">Join Our WhatsApp Group →</a>
-  <p style="font-size:12px; color:rgba(248,244,238,0.5); margin-top:12px;">
-    ⚠️ If you see the Play Store, go back, <strong>long-press this button</strong>, and choose "Open in browser".
+  <!-- Long-press instruction added -->
+  <p style="font-size:13px; color:rgba(248,244,238,0.6); margin-top:12px;">
+    ⚠️ <strong>Having trouble?</strong> If you see the Play Store or a blank page, <strong>long-press this button</strong> and select "Open in browser".
   </p>
   <div class="stat-bar">
     <div class="stat"><span class="stat-num">400+</span><span class="stat-label">Customers</span></div>
@@ -463,10 +463,10 @@ footer span { color: var(--gold); opacity: 0.6; }
   <p class="section-sub">Once the batch closes, you wait for the next one. Join now to place your order in this round.</p>
   <div class="batch-note">⚡ Current batch is open — limited spots</div>
   <br><br>
-  <!-- CHANGED: same fix for second button -->
   <a href="https://chat.whatsapp.com/DdjjarQyUNtAXRRQlzke3A" class="btn-gold" id="whatsappButton2">Join the WhatsApp Group Now →</a>
-  <p style="font-size:12px; color:rgba(248,244,238,0.5); margin-top:12px;">
-    ⚠️ If you see the Play Store, go back, <strong>long-press this button</strong>, and choose "Open in browser".
+  <!-- Long-press instruction added for second button -->
+  <p style="font-size:13px; color:rgba(248,244,238,0.6); margin-top:12px;">
+    ⚠️ <strong>Having trouble?</strong> If you see the Play Store or a blank page, <strong>long-press this button</strong> and select "Open in browser".
   </p>
 </div>
 
@@ -510,17 +510,17 @@ function fireLeadEvent() {
   sendCAPI(eventId);
 }
 
-// Attach tracking to both buttons with delay and preventDefault
+// Attach tracking with delay to both buttons
 document.querySelectorAll('#whatsappButton, #whatsappButton2').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     const targetUrl = this.href;
     fireLeadEvent();
-    setTimeout(function() {
+    setTimeout(() => {
       window.location.href = targetUrl;
     }, 300);
   });
 });
 </script>
 </body>
-  </html>
+</html>
